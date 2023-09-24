@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="sign-in-card">
+    <div class="main-logo">
+      <a class="logo" href="https://postimg.cc/t7XJbBP4" aria-label="Homepage">
+        <img src="https://i.postimg.cc/2jWZ4JSh/main-logo.png" height="150" alt="Logo EduFocus">
+      </a>
+
+      <div class="title-sign-in" [ngStyle]="{'font-family': 'Poppins'}"><p>Log in to EduFocus</p></div>
+    </div>
+
+      <div class="container-email" [ngStyle]="{'font-family': 'Poppins'}">
+        <div class="title-email"><mat-label>Enter your email</mat-label></div>
+
+        <mat-form-field [style.width.px]="300">
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="container-password" [ngStyle]="{'font-family': 'Poppins'}">
+        <div class="title-password">
+          <mat-label>Enter your password</mat-label>
+          <a class="forgot-password" href="#">Forgot password?</a>
+        </div>
+
+        <mat-form-field [style.width.px]="300">
+          <input matInput [type]="hide ? 'password' : 'text'"  [formControl]="password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <section>
+        <div class="container-button" [ngStyle]="{'font-family': 'Poppins'}">
+          <button mat-raised-button color="primary" class="large-button" (click)="authenticatedUser()">
+            Log In
+          </button>
+        </div>
+      </section>
+
+
+    <div class="create-account" [ngStyle]="{'font-family': 'Poppins'}">
+      <p>New to EduFocus? <a href="#">Create an account</a></p>
+
+    </div>
+
+
+    <div class="container-footer" [ngStyle]="{'font-family': 'Poppins'}">
+      <ul class="footer-items">
+        <li>Terms</li>
+        <li>Privacy</li>
+        <li>Docs</li>
+        <li><a href="#">Contact EduFocus Support</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
