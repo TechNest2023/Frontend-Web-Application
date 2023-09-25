@@ -7,7 +7,7 @@ import {HomeComponent} from "./pages/home/home.component";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/log-in',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
   {
@@ -24,6 +24,11 @@ const routes: Routes = [
     path: 'register',
     title: 'Create Account',
     component: RegistrationComponent,
+  },
+  {
+    path: 'home',
+    title: 'Home',
+    component: HomeComponent,
   }
 ];
 

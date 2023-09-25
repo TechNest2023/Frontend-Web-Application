@@ -16,6 +16,9 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import { HomeComponent } from './pages/home/home.component';
 import {MatSelectModule} from "@angular/material/select";
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
 
 
 @NgModule({
@@ -24,6 +27,7 @@ import {MatSelectModule} from "@angular/material/select";
     FooterComponent,
     NavComponent,
     HomeComponent,
+    SidebarComponent,
 
   ],
   imports: [
@@ -39,6 +43,8 @@ import {MatSelectModule} from "@angular/material/select";
     MatToolbarModule,
     MatMenuModule,
     MatSelectModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

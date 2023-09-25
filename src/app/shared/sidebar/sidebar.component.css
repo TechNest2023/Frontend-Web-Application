@@ -1,0 +1,44 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 60px;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.sidenav.expanded {
+  width: 200px;
+}
+
+.sidenav:hover {
+  width: 200px;
+}
+
+.mat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: width 0.3s;
+}
+
+.mat-list-item span {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.mat-icon, img {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.mat-list-item.active {
+  background-color: #555;
+}
+
+.mat-sidenav-content {
+  padding: 20px;
+}

@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened class="sidenav">
+    <div class="logo">
+      <img src="https://i.postimg.cc/4d3LMbT9/menu.png" width="30" height="30" alt="Menu">
+      <span>My Advice</span>
+    </div>
+
+    <mat-nav-list>
+      <mat-list-item routerLink="#">
+        <img src="https://i.postimg.cc/fy4Qcg6K/persons.png" width="30" height="30" alt="Profile">
+        <span>Especialistas</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="#">
+        <img src="https://i.postimg.cc/C5jTms0V/calendar.png" width="30" height="30" alt="Sesions">
+        <span>Sesiones Agendadas</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/chat">
+        <img src="https://i.postimg.cc/XNFbj4CD/chat.png" width="30" height="30" alt="Chat">
+        <span>Chat</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="#">
+        <img src="https://i.postimg.cc/g2mBPPVR/task.png" width="30" height="30" alt="Activities">
+        <span>Actividades</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="#">
+        <img src="https://i.postimg.cc/FsjnqKLN/progress.png"  width="30" height="30" alt="Progress">
+        <span>Progreso</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- Aquí colocarás el contenido de tu página -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
