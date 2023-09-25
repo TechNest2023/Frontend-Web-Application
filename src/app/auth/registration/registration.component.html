@@ -1,0 +1,138 @@
+
+<div class="container-registration">
+
+  <div class="overlay"></div>
+
+
+  <div class="registration-card">
+
+    <div class="registration-image"></div>
+
+    <div class="registration-form">
+
+      <div class="title-other"><p>Registration</p></div>
+
+      <div class="main-logo">
+        <a class="logo" href="https://postimg.cc/t7XJbBP4" aria-label="Homepage">
+          <img src="https://i.postimg.cc/2jWZ4JSh/main-logo.png" height="90" alt="Logo EduFocus">
+        </a>
+      </div>
+
+
+      <div class="registration-fullname">
+        <div class="title-register"><mat-label>Full Name</mat-label></div>
+        <mat-form-field [style.width.px]="250">
+          <input matInput placeholder="Enter your name" [formControl]="fullName" required>
+        </mat-form-field>
+      </div>
+
+      <div class="registration-username">
+        <div class="title-register"><mat-label>User Name</mat-label></div>
+        <mat-form-field [style.width.px]="250">
+          <input matInput placeholder="Enter a username" [formControl]="username">
+        </mat-form-field>
+      </div>
+
+      <div class="registration-typeOfUser">
+        <div class="title-register"><mat-label>Type Of User</mat-label></div>
+        <mat-form-field [style.width.px]="250">
+          <mat-label>Select type of user</mat-label>
+          <mat-select [formControl]="typeOfUser" required>
+            <mat-option value="one">Student</mat-option>
+            <mat-option value="two">Specialist</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="registration-email">
+        <div class="title-register"><mat-label>Email</mat-label></div>
+
+        <mat-form-field [style.width.px]="250">
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="registration-career">
+        <div class="title-register"><mat-label>Career</mat-label></div>
+        <mat-form-field [style.width.px]="250">
+          <mat-label>Select Career</mat-label>
+          <mat-select [formControl]="careerControl">
+            <mat-option>-- None --</mat-option>
+            <mat-optgroup *ngFor="let group of careerGroups" [label]="group.name">
+              <mat-option *ngFor="let career of group.career" [value]="career.value">
+                {{career.viewValue}}
+              </mat-option>
+            </mat-optgroup>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="registration-university-institute">
+        <div class="title-register"><mat-label>University/Institute</mat-label></div>
+        <mat-form-field [style.width.px]="250">
+          <input matInput placeholder="Enter your university or institute" [formControl]="universityOrInstitute">
+        </mat-form-field>
+      </div>
+
+
+      <div class="registration-password">
+        <div class="title-register">
+          <mat-label>Password</mat-label>
+        </div>
+
+        <mat-form-field [style.width.px]="250">
+          <input matInput [type]="hide ? 'password' : 'text'"  [formControl]="password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div class="registration-confirm-password" >
+        <div class="title-register">
+          <mat-label>Confirm Password</mat-label>
+        </div>
+
+        <mat-form-field [style.width.px]="250">
+          <input matInput [type]="hide ? 'password' : 'text'"  [formControl]="confirmPassword" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div class="registration-birthdate">
+        <div class="title-register"> <mat-label>Birthdate</mat-label></div>
+        <mat-form-field [style.width.px]="250">
+          <mat-label>Select Birhdate</mat-label>
+          <input matInput [matDatepicker]="picker" [formControl]="birthdate">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="registration-gender">
+        <mat-label class="title-register">Gender</mat-label>
+        <mat-radio-group aria-label="Gender" [formControl]="gender">
+          <mat-radio-button value="1">Male</mat-radio-button>
+          <mat-radio-button value="2">Female</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <section>
+        <div class="registration-button" [ngStyle]="{'font-family': 'Poppins'}">
+          <button mat-raised-button color="primary" class="large-button" (click)="createAccount()">
+            Register
+          </button>
+        </div>
+      </section>
+
+      <div class="alredy-account">
+        <p>Already have an account? <a routerLink="/log-in"> Log In</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>

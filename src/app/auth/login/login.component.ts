@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
@@ -6,7 +6,7 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angula
 import {NgIf, NgStyle} from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {LoginService} from "../../services/auth/login.service";
 import { FormBuilder } from '@angular/forms';
 import {LoginRequest} from "../../services/auth/loginRequest";
@@ -26,6 +26,7 @@ import {LoginRequest} from "../../services/auth/loginRequest";
     MatDividerModule,
     NgIf,
     NgStyle,
+    RouterLink,
   ],
 })
 

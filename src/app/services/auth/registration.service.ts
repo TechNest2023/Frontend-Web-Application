@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
-import {LoginRequest} from "./loginRequest";
+import {RegistrationRequest} from "./registrationRequest";
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class RegistrationService {
 
   constructor() { }
-  logIn(credentials:LoginRequest){
+
+  registration(credentials:any){
     console.log(credentials);
   }
 }

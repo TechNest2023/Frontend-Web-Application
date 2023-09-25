@@ -1,0 +1,84 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://i.postimg.cc/X798hcCt/backgroud-register-crop.png');
+  background-size: cover;
+  background-position: left center;
+}
+
+
+.title-other{
+  font-size: 30px;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.registration-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+
+  max-width: 1290px;
+  box-shadow: 0 45px 60px rgba(0, 0, 0, 0.6);
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.registration-image {
+  width: 55%;
+  background-image: url('https://i.postimg.cc/x1CKFF4t/backgroud-register.jpg');
+  background-position: left center;
+  background-size: cover;
+}
+
+.logo{
+  margin-left: 80px;
+}
+
+.registration-form {
+  width: 42%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.registration-form > div {
+  width: 49%;
+}
+
+.title-register {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+
+.registration-button {
+  display: table-cell;
+  max-width: 800px;
+
+}
+
+.large-button {
+  width: 500px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.alredy-account{
+  margin-top: 5px;
+}
+
+.alredy-account a{
+  text-decoration: none;
+  color: blue;
+  font-weight: revert;
+}
