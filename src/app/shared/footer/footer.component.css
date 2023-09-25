@@ -1,0 +1,52 @@
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.footer-section h2 {
+  font-size: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: block;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-media img {
+  width: 28px;
+  height: 28px;
+}

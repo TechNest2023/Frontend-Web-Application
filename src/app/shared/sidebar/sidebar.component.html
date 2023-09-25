@@ -1,9 +1,9 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav mode="side" opened class="sidenav">
-    <div class="logo">
+    <mat-list-item class="logo" [ngClass]="{'first-item': sidenav.opened}">
       <img src="https://i.postimg.cc/4d3LMbT9/menu.png" width="30" height="30" alt="Menu">
       <span>My Advice</span>
-    </div>
+    </mat-list-item>
 
     <mat-nav-list>
       <mat-list-item routerLink="#">
@@ -34,6 +34,6 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <!-- Aquí colocarás el contenido de tu página -->
+    <app-home></app-home>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -60,7 +60,7 @@ export class LoginComponent {
       this.userLoginOn = true;
 
       this.loginService.logIn(this.logInForm.value as LoginRequest);
-      this.router.navigateByUrl('/start');
+      this.router.navigateByUrl('/home');
       this.email.reset();
       this.password.reset();
     }

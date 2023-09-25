@@ -3,15 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent} from "./auth/login/login.component";
 import {RegistrationComponent} from "./auth/registration/registration.component";
 import {HomeComponent} from "./pages/home/home.component";
+import {SidebarComponent} from "./shared/sidebar/sidebar.component";
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/log-in',
     pathMatch: 'full',
   },
   {
-    path: 'start',
+    path: 'home',
     title: 'EduFocus',
     component: HomeComponent,
   },
@@ -26,9 +27,9 @@ const routes: Routes = [
     component: RegistrationComponent,
   },
   {
-    path: 'home',
-    title: 'Home',
-    component: HomeComponent,
+    path: 'start',
+    title: 'Start',
+    component: SidebarComponent,
   }
 ];
 
