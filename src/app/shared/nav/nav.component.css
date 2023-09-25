@@ -1,0 +1,63 @@
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007f98;
+}
+
+.spacer {
+  flex-grow: 1;
+  min-width: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.languages {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  transition: border-bottom 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.nav-title {
+  font-size: 16px;
+}
+
+.mat-icon-button {
+  padding: 0;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid white;
+  transition: width 0.3s ease;
+  width: 100%;
+}
+
+.nav-item:hover,
+.mat-icon-button:hover {
+  background-color: transparent;
+}
