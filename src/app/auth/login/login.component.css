@@ -19,12 +19,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente */
-  z-index: 1; /* Asegura que el div de fondo esté encima del contenido */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .container > * {
-  position: relative; /* Asegura que el contenido esté por encima del div de fondo */
+  position: relative;
   z-index: 2;
 }
 

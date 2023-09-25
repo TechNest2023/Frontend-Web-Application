@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './shared/footer/footer.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
@@ -15,14 +14,16 @@ import { NavComponent } from './shared/nav/nav.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
+import { HomeComponent } from './pages/home/home.component';
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    DashboardComponent,
     NavComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -37,6 +38,7 @@ import {MatMenuModule} from "@angular/material/menu";
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

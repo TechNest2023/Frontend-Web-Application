@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {RegistrationComponent} from "./auth/registration/registration.component";
+import {HomeComponent} from "./pages/home/home.component";
 
 const routes: Routes = [
   {
@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'start',
     title: 'EduFocus',
-    component: DashboardComponent,
+    component: HomeComponent,
   },
   {
     path: 'log-in',

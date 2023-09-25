@@ -1,0 +1,160 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #007f98;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.specialist-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.specialist-card {
+  width: calc(25% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.specialist-card img {
+  width: 290px;
+  height: 200px;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.specialist-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.specialist-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.tags span {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #007f98;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/*-------------------------*/
+/* Estilos para los cards de especialistas con efecto hover */
+
+.specialist-card {
+  width: calc(25% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specialist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+.specialist-card img:hover {
+  transform: scale(1.05);
+}
+
+.specialist-card h3:hover {
+  color: #007f98;
+}
+
+.specialist-card p:hover {
+  color: #007f98;
+}
+
+.tags span:hover {
+  background-color: #005b72;
+}
+
+.specialist-card button {
+  margin-top: 15px;
+  background-color: #007f98;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.specialist-card button:hover {
+  background-color: #005b72;
+  transform: scale(1.05);
+}
+
+.large-button {
+  width: 280px;
+  height: 45px;
+  border-radius: 25px;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .specialist-card {
+    width: calc(50% - 20px);
+    margin-right: 0;
+  }
+}
