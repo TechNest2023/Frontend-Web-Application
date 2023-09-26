@@ -1,0 +1,24 @@
+<mat-card class="chat-card">
+  <mat-card-header>
+    <img mat-card-avatar class="header-image" [src]="contact.avatar">
+    <mat-card-title>{{ contact.name }}</mat-card-title>
+    <mat-card-subtitle>{{ contact.status }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <!-- Lista de mensajes -->
+    <div *ngFor="let message of messages" class="message-container">
+      <div [ngClass]="{'sent': message.sender === 'Tú', 'received': message.sender !== 'Tú'}" class="message">
+        {{ message.text }}
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- Campo de entrada de mensajes -->
+    <mat-form-field class="chat-input">
+      <input matInput [(ngModel)]="newMessage" placeholder="Escribe un mensaje">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="sendMessage()">Enviar</button>
+    <button mat-raised-button (click)="closeDialog()">Cerrar</button>
+  </mat-card-actions>
+
+</mat-card>

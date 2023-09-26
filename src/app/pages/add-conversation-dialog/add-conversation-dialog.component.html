@@ -1,0 +1,26 @@
+<!-- add-conversation-dialog.component.html -->
+<div class="dialog-container">
+  <h2>Selecciona especialista</h2>
+  <!-- Barra de búsqueda -->
+  <mat-form-field class="search-input">
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="searchText"
+      placeholder="Buscar contactos"
+    />
+  </mat-form-field>
+  <mat-selection-list class="contact-list">
+    <div *ngFor="let contact of filteredContacts">
+        <mat-checkbox [(ngModel)]="contact.selected">        <mat-card class="contact-card">
+          <mat-card-header>
+            <img mat-card-avatar [src]="contact.avatar" />
+            <p>{{ contact.name }} <i>{{contact.occupation}}</i>  </p>
+          </mat-card-header>
+        </mat-card></mat-checkbox>
+    </div>
+  </mat-selection-list>
+  <button mat-raised-button color="primary" (click)="confirmSelection()">
+    Confirmar
+  </button>
+</div>

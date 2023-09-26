@@ -1,0 +1,79 @@
+/* Estilo para el cuadro de diálogo */
+:host {
+  display: block;
+}
+
+.dialog-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 0;
+}
+
+/* Estilo para la barra de búsqueda */
+.search-input {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la lista de contactos */
+.contact-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.contact-card {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Resto de los estilos... */
+
+.contact-item {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.contact-item label {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+/* Estilo para el botón "Confirmar" */
+button.mat-raised-button {
+  display: block;
+  margin: 20px auto;
+  width: 100px;
+  background-color: #1976D2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.mat-raised-button:hover {
+  background-color: #1565C0;
+}
+
+mat-card-header{
+  align-items: center;
+}
+ul{
+  margin-left: 0px;
+}

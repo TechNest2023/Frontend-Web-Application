@@ -1,0 +1,51 @@
+
+/* Estilos para el cuadro de diálogo de chat */
+.chat-card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilos para mensajes enviados por el usuario (a la izquierda) */
+.sent {
+  text-align: left;
+  background-color: #1976D2;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 10px 15px;
+  margin: 5px 0;
+  display: inline-block; /* Cambio a inline-block */
+}
+
+/* Estilos para mensajes recibidos (a la derecha) */
+.received {
+  text-align: right;
+  background-color: #f5f5f5;
+  color: #333;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 10px 15px;
+  margin: 5px 0;
+  display: inline-block; /* Cambio a inline-block */
+  max-width: 70%; /* Ajusta el ancho máximo del contenedor del mensaje */
+}
+
+/* Estilos para el campo de entrada de mensajes */
+.chat-input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+/* Estilos para el avatar del contacto en el encabezado */
+.contact-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
+
+/* Estilos para los contenedores de mensajes */
