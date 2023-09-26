@@ -12,12 +12,16 @@
   </mat-form-field>
   <mat-selection-list class="contact-list">
     <div *ngFor="let contact of filteredContacts">
-        <mat-checkbox [(ngModel)]="contact.selected">        <mat-card class="contact-card">
+      <mat-checkbox [(ngModel)]="contact.selected">
+        <mat-card class="contact-card">
           <mat-card-header>
             <img mat-card-avatar [src]="contact.avatar" />
-            <p>{{ contact.name }} <i>{{contact.occupation}}</i>  </p>
+            <p>
+              {{ contact.name }} <i>{{ contact.occupation }}</i>
+            </p>
           </mat-card-header>
-        </mat-card></mat-checkbox>
+        </mat-card></mat-checkbox
+      >
     </div>
   </mat-selection-list>
   <button mat-raised-button color="primary" (click)="confirmSelection()">
