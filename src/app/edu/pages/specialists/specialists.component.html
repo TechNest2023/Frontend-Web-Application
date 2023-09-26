@@ -1,0 +1,16 @@
+<div class="specialist-cards">
+    <div class="specialist-card" *ngFor="let specialist of specialists">
+        <img [src]="specialist.image" alt="{{ specialist.fullname }}">
+        <h3>{{ specialist.fullname }}</h3>
+        <p>Age: {{ specialist.age }}</p>
+        <p>Career: {{ specialist.career }}</p>
+        <p>Specialization: {{ specialist.specialization }}</p>
+        <div class="tags">
+            <span *ngFor="let tag of specialist.topics">{{ tag }}</span>
+        </div>
+        <p>Language: {{ specialist.language }}</p>
+        <p>Nationality: {{ specialist.nationality }}</p>
+        <button mat-raised-button color="primary" class="large-button">Reserve</button>
+    </div>
+</div>
+

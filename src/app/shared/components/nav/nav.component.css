@@ -1,13 +1,12 @@
+.mat-spacer {
+  flex: 1 1 auto;
+}
+
 .mat-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #007f98;
-}
-
-.spacer {
-  flex-grow: 1;
-  min-width: 20px;
 }
 
 .logo {
@@ -28,22 +27,6 @@
   position: relative;
   text-decoration: none;
   color: white;
-}
-
-.nav-icon {
-  font-size: 24px;
-  cursor: pointer;
-  margin-right: 5px;
-}
-
-.nav-title {
-  font-size: 16px;
-}
-
-.mat-icon-button {
-  padding: 0;
-  margin: 0 5px;
-  transition: background-color 0.3s ease;
 }
 
 .nav-item:hover::after {

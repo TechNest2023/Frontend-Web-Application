@@ -1,0 +1,42 @@
+<app-nav></app-nav>
+
+<div class="home-container">
+  <div class="search-bar">
+    <input type="text" placeholder="Find specialists...">
+    <button mat-raised-button color="primary"><mat-icon>search</mat-icon> Search</button>
+  </div>
+
+  <div class="filters">
+    <mat-form-field class="filter">
+      <mat-select placeholder="Country">
+        <mat-option value="country1">Perú</mat-option>
+        <mat-option value="country2">México</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="filter">
+      <mat-select placeholder="Language">
+        <mat-option value="language1">Spanish</mat-option>
+        <mat-option value="language2">English</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="filter">
+      <mat-select placeholder="Career">
+        <mat-option value="career1">Psychology</mat-option>
+        <mat-option value="career2">Education</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="filter">
+      <mat-select placeholder="Specialization">
+        <mat-option value="specialization1">Cognitive psychology</mat-option>
+        <mat-option value="specialization2">Neuroscience</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <app-specialists></app-specialists>
+</div>
+
+<app-footer></app-footer>

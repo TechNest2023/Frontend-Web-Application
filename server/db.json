@@ -1,0 +1,94 @@
+{
+  "specialists": [
+    {
+      "id": 1,
+      "image": "https://i.postimg.cc/yxMcJkFd/teacher.jpg",
+      "fullname": "Melanie Cruz",
+      "age": 25,
+      "career": "Psychology",
+      "specialization": "Cognitive Psychology",
+      "topics": [
+        "memoria",
+        "aprendizaje",
+        "comportamiento"
+      ],
+      "language": "Español",
+      "nationality": "Peruana"
+    },
+    {
+      "id": 2,
+      "image": "https://i.postimg.cc/Z5KRpXmm/specialist1.jpg",
+      "fullname": "Jorge Méndez",
+      "age": 30,
+      "career": "Education",
+      "specialization": "Neuroscience",
+      "topics": [
+        "Técnicas de estudio",
+        "Organización",
+        "Hábitos"
+      ],
+      "language": "Español",
+      "nationality": "Mexicana"
+    },
+    {
+      "id": 3,
+      "image": "https://i.postimg.cc/KjPzD24G/specialist3.jpg",
+      "fullname": "Leidy Gomero",
+      "age": 35,
+      "career": "Education",
+      "specialization": "Neuroscience",
+      "topics": [
+        "Técnicas de estudio",
+        "Organización",
+        "Hábitos"
+      ],
+      "language": "Español",
+      "nationality": "Peruana"
+    },
+    {
+      "id": 4,
+      "image": "https://i.postimg.cc/yx4xRd1p/specialist2.jpg",
+      "fullname": "Mario Castro",
+      "age": 25,
+      "career": "Education",
+      "specialization": "Neuroscience",
+      "topics": [
+        "Técnicas de estudio",
+        "Organización",
+        "Hábitos"
+      ],
+      "language": "Español",
+      "nationality": "Peruana"
+    },
+    {
+      "id": 5,
+      "image": "https://i.postimg.cc/5NmyHbZp/specialist4.jpg",
+      "fullname": "Jorge Ventura",
+      "age": 25,
+      "career": "Education",
+      "specialization": "Neuroscience",
+      "topics": [
+        "Técnicas de estudio",
+        "Organización",
+        "Hábitos"
+      ],
+      "language": "Español",
+      "nationality": "Mexicana"
+    },
+    {
+      "id": 6,
+      "image": "https://i.postimg.cc/HkZL23Wy/specialist5.png",
+      "fullname": "Paola Shau",
+      "age": 27,
+      "career": "Education",
+      "specialization": "Neuroscience",
+      "topics": [
+        "Técnicas de estudio",
+        "Organización",
+        "Hábitos"
+      ],
+      "language": "Español",
+      "nationality": "Mexicana"
+    }
+  ]
+}

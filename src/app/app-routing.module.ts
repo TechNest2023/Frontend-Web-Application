@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {LoginComponent} from "./auth/login/login.component";
-import {RegistrationComponent} from "./auth/registration/registration.component";
-import {HomeComponent} from "./pages/home/home.component";
-import {SidebarComponent} from "./shared/sidebar/sidebar.component";
+import {LoginComponent} from "./core/auth/login/login.component";
+import {RegistrationComponent} from "./core/auth/registration/registration.component";
+import {HomeComponent} from "./public/pages/home/home.component";
+import {SidebarComponent} from "./shared/components/sidebar/sidebar.component";
+import {SupportComponent} from "./public/pages/support/support.component";
 
 const routes: Routes = [
   {
@@ -27,9 +28,14 @@ const routes: Routes = [
     component: RegistrationComponent,
   },
   {
-    path: 'start',
-    title: 'Start',
+    path: 'edu/my-advice',
+    title: 'Advices',
     component: SidebarComponent,
+  },
+  {
+    path: 'support',
+    title: 'Support',
+    component: SupportComponent,
   }
 ];
 
