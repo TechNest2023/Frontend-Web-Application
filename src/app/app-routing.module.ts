@@ -5,6 +5,7 @@ import {RegistrationComponent} from "./core/auth/registration/registration.compo
 import {HomeComponent} from "./public/pages/home/home.component";
 import {SidebarComponent} from "./shared/components/sidebar/sidebar.component";
 import {SupportComponent} from "./public/pages/support/support.component";
+import {ChatComponent} from "./edu/pages/chats/chat/chat.component";
 
 const routes: Routes = [
   {
@@ -36,7 +37,12 @@ const routes: Routes = [
     path: 'support',
     title: 'Support',
     component: SupportComponent,
-  }
+  },
+  {
+    path: 'chat',
+    title: 'Chat',
+    component: ChatComponent,
+  },
 ];
 
 @NgModule({

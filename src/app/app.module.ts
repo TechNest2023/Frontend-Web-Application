@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import{MatFormFieldModule} from "@angular/material/form-field";
@@ -21,10 +20,21 @@ import {MatSelectModule} from "@angular/material/select";
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
+import { MatCardModule } from '@angular/material/card';
+
+
 import { SupportComponent } from './public/pages/support/support.component';
 import { SpecialistsComponent } from './edu/pages/specialists/specialists.component';
 import {SpecialistService} from "./edu/services/specialist.service";
 
+
+import { AddConversationDialogService } from './edu/services/chat/add-conversation-dialog.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ChatDialogComponent } from './edu/pages/chats/chat-dialog/chat-dialog.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ChatComponent } from './edu/pages/chats/chat/chat.component';
+import { AddConversationDialogComponent } from './edu/pages/chats/add-conversation-dialog/add-conversation-dialog.component';
+import { SelectedSpecialistsComponent } from './edu/pages/selected-specialists/selected-specialists.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +43,14 @@ import {SpecialistService} from "./edu/services/specialist.service";
     NavComponent,
     HomeComponent,
     SidebarComponent,
+
     SupportComponent,
     SpecialistsComponent,
 
+    ChatComponent,
+    AddConversationDialogComponent,
+    ChatDialogComponent,
+    SelectedSpecialistsComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,8 +68,11 @@ import {SpecialistService} from "./edu/services/specialist.service";
     MatSidenavModule,
     MatListModule,
     HttpClientModule,
+    MatCardModule,
+    MatDialogModule,
+    MatCheckboxModule,
   ],
-  providers: [SpecialistService],
-  bootstrap: [AppComponent]
+  providers: [SpecialistService, AddConversationDialogService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

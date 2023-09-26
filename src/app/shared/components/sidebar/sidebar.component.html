@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav mode="side" opened class="sidenav">
+  <mat-sidenav #sidenav mode="side" opened class="sidenav" *ngIf="isCurrentRouteValid()">
     <mat-list-item class="logo" [ngClass]="{'first-item': sidenav.opened}">
       <img src="https://i.postimg.cc/4d3LMbT9/menu.png" width="30" height="30" alt="Menu">
       <span>My Advice</span>
@@ -34,6 +34,8 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <app-home></app-home>
+    <app-nav *ngIf="isCurrentRouteValid()"></app-nav>
+    <app-selected-specialists></app-selected-specialists>
+   <!--<router-outlet></router-outlet>-->
   </mat-sidenav-content>
 </mat-sidenav-container>
