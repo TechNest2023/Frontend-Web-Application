@@ -1,0 +1,36 @@
+.activity-card{
+  margin: 10px;
+  padding-top: 20px;
+  width: 700px;
+  border-radius: 20px;
+}
+.solution-btn{
+  background-color: yellow;
+}
+.center-button{
+  display: flex;
+  justify-content: center;
+}
+.info-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.times-container{
+  display: flex;
+  flex-direction: column;
+}
+.time-container{
+}
+.list-cards-container{
+  display: flex;
+  justify-content: center;
+}
+@media (max-width:700px){
+  .activity-card{
+    width: 90%;
+  }
+}
+.text-container{
+  flex: 1;
+}

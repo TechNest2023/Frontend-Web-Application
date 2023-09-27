@@ -6,6 +6,8 @@ import {HomeComponent} from "./public/pages/home/home.component";
 import {SidebarComponent} from "./shared/components/sidebar/sidebar.component";
 import {SupportComponent} from "./public/pages/support/support.component";
 import {ChatComponent} from "./edu/pages/chats/chat/chat.component";
+import { ListActivitiesComponent } from './edu/pages/activities/list-activities/list-activities.component';
+import { SelectedSpecialistsComponent } from './edu/pages/selected-specialists/selected-specialists.component';
 
 const routes: Routes = [
   {
@@ -24,14 +26,19 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
+    path: 'list-activities',
+    title: 'Activities',
+    component: ListActivitiesComponent,
+  },
+  {
     path: 'register',
     title: 'Create Account',
     component: RegistrationComponent,
   },
   {
-    path: 'edu/my-advice',
+    path: 'edu/my-advice/specialists',
     title: 'Advices',
-    component: SidebarComponent,
+    component: SelectedSpecialistsComponent,
   },
   {
     path: 'support',

@@ -1,0 +1,33 @@
+/* Estilo para el contenedor principal del cuadro de diálogo */
+.file-upload-dialog {
+  padding: 16px;
+  text-align: center;
+}
+
+/* Estilo para el botón de selección de archivo */
+.file-input-button {
+  background-color: #007bff; /* Cambia el color de fondo según tus preferencias */
+  color: white;
+  margin-top: 16px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.file-input-button:hover {
+  background-color: #0056b3; /* Cambia el color de fondo en el hover */
+}
+
+/* Estilo para la información del archivo seleccionado */
+.selected-file {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #333; /* Cambia el color del texto según tus preferencias */
+}
+
+/* Estilo para los botones de acciones */
+.mat-dialog-actions {
+  justify-content: center;
+  margin-top: 16px;
+}

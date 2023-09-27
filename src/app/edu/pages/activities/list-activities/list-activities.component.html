@@ -1,0 +1,35 @@
+<div *ngFor="let activity of activities" class="list-cards-container">
+  <mat-card class="activity-card">
+    <div class="info-container">
+      <mat-card-header class="text-container">
+        <mat-card-title
+          ><h3>{{ activity.title }}</h3></mat-card-title
+        >
+        <mat-card-subtitle
+          >Especialista: <strong>{{ activity.specialist }}</strong></mat-card-subtitle
+        >
+        <mat-card-subtitle
+          >Detalles de la actividad: <a [href]="activity.details">Enlace a la actividad</a></mat-card-subtitle
+        >
+      </mat-card-header>
+      <div class="times-container">
+        <label>Inicio: </label>
+        <mat-card-actions class="time-container">
+
+          <button mat-raised-button class="time-btn">{{ activity.start_date }}</button>
+          <button mat-raised-button class="time-btn">{{activity.start_time }}</button>
+        </mat-card-actions>
+        <label>Fin: </label>
+        <mat-card-actions class="time-container">
+          <button mat-raised-button class="time-btn">{{ activity.expiration_date }}</button>
+          <button mat-raised-button class="time-btn">{{activity.expiration_time }}</button>
+        </mat-card-actions>
+        <label>Intentos restantes: <strong>{{activity.attempts_number}}</strong></label>
+      </div>
+    </div>
+    <mat-card-actions class="center-button">
+      <button mat-raised-button class="solution-btn" (click)="openFileUploadDialog(activity)">
+        <strong>subir solución</strong></button>
+    </mat-card-actions>
+  </mat-card>
+</div>

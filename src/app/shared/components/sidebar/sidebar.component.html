@@ -1,12 +1,12 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav mode="side" opened class="sidenav" *ngIf="isCurrentRouteValid()">
+  <mat-sidenav #sidenav mode="side" opened class="sidenav" *ngIf="enableSidebar()">
     <mat-list-item class="logo" [ngClass]="{'first-item': sidenav.opened}">
       <img src="https://i.postimg.cc/4d3LMbT9/menu.png" width="30" height="30" alt="Menu">
       <span>My Advice</span>
     </mat-list-item>
 
     <mat-nav-list>
-      <mat-list-item routerLink="#">
+      <mat-list-item routerLink="edu/my-advice/specialists">
         <img src="https://i.postimg.cc/fy4Qcg6K/persons.png" width="30" height="30" alt="Profile">
         <span>Specialists</span>
       </mat-list-item>
@@ -21,7 +21,7 @@
         <span>Chat</span>
       </mat-list-item>
 
-      <mat-list-item routerLink="#">
+      <mat-list-item routerLink="/list-activities">
         <img src="https://i.postimg.cc/g2mBPPVR/task.png" width="30" height="30" alt="Activities">
         <span>Activities</span>
       </mat-list-item>
@@ -34,8 +34,7 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <app-nav *ngIf="isCurrentRouteValid()"></app-nav>
-    <app-selected-specialists></app-selected-specialists>
-   <!--<router-outlet></router-outlet>-->
+    <app-nav *ngIf="enableNavBar()"></app-nav>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

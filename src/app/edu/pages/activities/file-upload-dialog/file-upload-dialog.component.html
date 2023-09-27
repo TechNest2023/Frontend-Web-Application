@@ -1,0 +1,19 @@
+<div class="file-upload-dialog">
+  <h2 class="mat-dialog-title">Subir Archivo</h2>
+  <div class="mat-dialog-content">
+    <div class="file-input-container">
+      <input type="file" #fileInput style="display: none" (change)="onFileSelected($event)" accept=".pdf, .jpg, .png">
+      <button mat-raised-button color="primary" (click)="openFileInput(fileInput)" class="file-input-button">
+        Seleccionar archivo
+      </button>
+      <div *ngIf="selectedFile" class="selected-file">
+        Archivo seleccionado: {{ selectedFile.name }}
+      </div>
+    </div>
+  </div>
+  <div class="mat-dialog-actions">
+    <button mat-button (click)="closeDialog()">Cancelar</button>
+    <button mat-button color="primary" (click)="uploadFile()" [disabled]="!selectedFile">Cargar</button>
+  </div>
+</div>
+

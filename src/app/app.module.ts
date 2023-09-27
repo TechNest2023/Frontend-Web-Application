@@ -35,6 +35,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ChatComponent } from './edu/pages/chats/chat/chat.component';
 import { AddConversationDialogComponent } from './edu/pages/chats/add-conversation-dialog/add-conversation-dialog.component';
 import { SelectedSpecialistsComponent } from './edu/pages/selected-specialists/selected-specialists.component';
+import { ListActivitiesComponent } from './edu/pages/activities/list-activities/list-activities.component';
+import { FileUploadDialogComponent } from './edu/pages/activities/file-upload-dialog/file-upload-dialog.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { SelectedSpecialistsComponent } from './edu/pages/selected-specialists/s
     AddConversationDialogComponent,
     ChatDialogComponent,
     SelectedSpecialistsComponent,
+    ListActivitiesComponent,
+    FileUploadDialogComponent,
   ],
   imports: [
     BrowserModule,

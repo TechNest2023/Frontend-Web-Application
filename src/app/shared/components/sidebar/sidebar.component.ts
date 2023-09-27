@@ -16,9 +16,14 @@ export class SidebarComponent {
         console.log(this.currentRoute);
       });
   }
-  isCurrentRouteValid(): boolean {
+  enableNavBar(): boolean {
     return !(
       this.currentRoute === 'log-in' || this.currentRoute === 'register'
     );
+  }
+  enableSidebar(): boolean{
+     return !(
+       this.currentRoute === 'log-in' || this.currentRoute === 'register' || this.currentRoute=='home'
+     );
   }
 }
