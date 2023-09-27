@@ -7,27 +7,27 @@
     </mat-list-item>
 
     <mat-nav-list>
-      <mat-list-item routerLink="edu/my-advice/specialists">
-        <img src="https://i.postimg.cc/fy4Qcg6K/persons.png" width="30" height="30" alt="Profile">
+      <mat-list-item (click)="changeComponent('select-specialist')">
+        <img src="https://i.postimg.cc/fy4Qcg6K/persons.png" width="30" height="30" alt="Specialists">
         <span>Specialists</span>
       </mat-list-item>
 
-      <mat-list-item routerLink="#">
+      <mat-list-item (click)="changeComponent('scheduled-sessions')">
         <img src="https://i.postimg.cc/C5jTms0V/calendar.png" width="30" height="30" alt="Sesions">
         <span>Scheduled Sessions</span>
       </mat-list-item>
 
-      <mat-list-item routerLink="/chat">
+      <mat-list-item (click)="changeComponent('chat')">
         <img src="https://i.postimg.cc/XNFbj4CD/chat.png" width="30" height="30" alt="Chat">
         <span>Chat</span>
       </mat-list-item>
 
-      <mat-list-item routerLink="/list-activities">
+      <mat-list-item (click)="changeComponent('list-activities')">
         <img src="https://i.postimg.cc/g2mBPPVR/task.png" width="30" height="30" alt="Activities">
         <span>Activities</span>
       </mat-list-item>
 
-      <mat-list-item routerLink="#">
+      <mat-list-item (click)="changeComponent('progress')">
         <img src="https://i.postimg.cc/FsjnqKLN/progress.png"  width="30" height="30" alt="Progress">
         <span>Progress</span>
       </mat-list-item>
@@ -35,6 +35,10 @@
   </mat-sidenav>
 
   <mat-sidenav-content class="sidenav-content-container">
-    <router-outlet></router-outlet>
+      <app-selected-specialists *ngIf="selectedComponent === 'select-specialist'"></app-selected-specialists>
+      <app-scheduled-sessions *ngIf="selectedComponent === 'scheduled-sessions'"></app-scheduled-sessions>
+      <app-chat *ngIf="selectedComponent === 'chat'"></app-chat>
+      <app-list-activities *ngIf="selectedComponent === 'list-activities'"></app-list-activities>
+      <app-progress *ngIf="selectedComponent === 'progress'"></app-progress>
   </mat-sidenav-content>
 </mat-sidenav-container>

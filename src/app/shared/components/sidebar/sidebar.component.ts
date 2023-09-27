@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -26,4 +28,12 @@ export class SidebarComponent {
        this.currentRoute === 'log-in' || this.currentRoute === 'register' || this.currentRoute=='home'
      );
   }
+
+
+  selectedComponent: string = 'select-specialist';
+
+  changeComponent(componentName: string) {
+    this.selectedComponent = componentName;
+  }
+
 }

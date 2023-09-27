@@ -13,7 +13,7 @@ export class NavComponent {
       titleIcon: 'home',
     },
     {
-      path:'/edu/my-advice/specialists',
+      path:'/edu/my-advice',
       title: 'My Advice',
       titleIcon: 'people',
     },

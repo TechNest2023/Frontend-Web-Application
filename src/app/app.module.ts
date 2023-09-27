@@ -37,6 +37,8 @@ import { AddConversationDialogComponent } from './edu/pages/chats/add-conversati
 import { SelectedSpecialistsComponent } from './edu/pages/selected-specialists/selected-specialists.component';
 import { ListActivitiesComponent } from './edu/pages/activities/list-activities/list-activities.component';
 import { FileUploadDialogComponent } from './edu/pages/activities/file-upload-dialog/file-upload-dialog.component';
+import { ScheduledSessionsComponent } from './edu/pages/scheduled-sessions/scheduled-sessions.component';
+import { ProgressComponent } from './edu/pages/progress/progress.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { FileUploadDialogComponent } from './edu/pages/activities/file-upload-di
     SelectedSpecialistsComponent,
     ListActivitiesComponent,
     FileUploadDialogComponent,
+    ScheduledSessionsComponent,
+    ProgressComponent,
   ],
   imports: [
     BrowserModule,
