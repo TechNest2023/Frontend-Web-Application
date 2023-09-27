@@ -10,7 +10,7 @@ import { FileUploadDialogComponent } from '../file-upload-dialog/file-upload-dia
 export class ListActivitiesComponent {
   activities = [
     {
-      title: 'Revisión bibliográfica',
+      title: 'Planificación de Tiempo y Tareas:',
       specialist: 'María Fernández',
       details:
         'https://drive.google.com/file/d/1-wsV_vy5M2chaJE7RqMYotfqCTDo9lfU/view',
@@ -21,7 +21,7 @@ export class ListActivitiesComponent {
       attempts_number: 1,
     },
     {
-      title: 'Elaboración de conclusiones',
+      title: 'Toma de Apuntes Efectiva',
       specialist: 'María Fernández',
       details:
         'https://drive.google.com/file/d/1-wsV_vy5M2chaJE7RqMYotfqCTDo9lfU/view',
@@ -32,7 +32,18 @@ export class ListActivitiesComponent {
       attempts_number: 1,
     },
     {
-      title: 'Diseño de un protocolo de investigación',
+      title: 'Hábitos de Sueño Saludable',
+      specialist: 'María Fernández',
+      details:
+        'https://drive.google.com/file/d/1-wsV_vy5M2chaJE7RqMYotfqCTDo9lfU/view',
+      expiration_date: '10/10/2023',
+      expiration_time: '09:00 p.m',
+      start_date: '01/10/2023',
+      start_time: '09:00 p.m',
+      attempts_number: 1,
+    },
+    {
+      title: 'Meditación y Mindfulness: ',
       specialist: 'María Fernández',
       details:
         'https://drive.google.com/file/d/1-wsV_vy5M2chaJE7RqMYotfqCTDo9lfU/view',
@@ -44,13 +55,13 @@ export class ListActivitiesComponent {
     },
   ];
   constructor(private dialog: MatDialog) {}
-  openFileUploadDialog(activity:any): void {
+  openFileUploadDialog(activity: any): void {
     const dialogRef = this.dialog.open(FileUploadDialogComponent, {
       width: '400px',
       data: {
         deleteActivity: this.removeActivity,
-        activitySelectioned: activity
-      }
+        activitySelectioned: activity,
+      },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
