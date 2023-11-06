@@ -16,11 +16,6 @@ export class NavComponent {
       path:'/edu/my-advice',
       title: 'My Advice',
       titleIcon: 'people',
-    },
-    {
-      path:'/support',
-      title: 'Support',
-      titleIcon: 'support_agent',
     }
   ]
 }

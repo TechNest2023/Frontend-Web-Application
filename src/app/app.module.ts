@@ -39,6 +39,7 @@ import { ListActivitiesComponent } from './edu/pages/activities/list-activities/
 import { FileUploadDialogComponent } from './edu/pages/activities/file-upload-dialog/file-upload-dialog.component';
 import { ScheduledSessionsComponent } from './edu/pages/scheduled-sessions/scheduled-sessions.component';
 import { ProgressComponent } from './edu/pages/progress/progress.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { ProgressComponent } from './edu/pages/progress/progress.component';
     MatCardModule,
     MatDialogModule,
     MatCheckboxModule,
+    MatDatepickerModule,
   ],
   providers: [SpecialistService, AddConversationDialogService],
   bootstrap: [AppComponent],

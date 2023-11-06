@@ -10,7 +10,7 @@
         </div>
         <p>Language: {{ specialist.language }}</p>
         <p>Nationality: {{ specialist.nationality }}</p>
-        <button mat-raised-button color="primary" class="large-button">Reserve</button>
+        <button mat-raised-button color="primary" class="large-button" (click)="onReserve(specialist)">Reserve</button>
     </div>
 </div>
 

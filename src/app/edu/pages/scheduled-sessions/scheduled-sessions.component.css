@@ -1,0 +1,10 @@
+mat-form-field {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+mat-datepicker {
+  width: 100%;
+  max-width: 300px;
+}

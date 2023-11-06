@@ -1,1 +1,14 @@
-<p>selected-specialists works!</p>
+<div class="specialist-cards">
+  <div class="specialist-card" *ngFor="let specialist of selectedSpecialists">
+    <img [src]="specialist.image" alt="{{ specialist.fullname }}">
+    <h3>{{ specialist.fullname }}</h3>
+    <p>Age: {{ specialist.age }}</p>
+    <p>Career: {{ specialist.career }}</p>
+    <p>Specialization: {{ specialist.specialization }}</p>
+    <div class="tags">
+      <span *ngFor="let tag of specialist.topics">{{ tag }}</span>
+    </div>
+    <p>Language: {{ specialist.language }}</p>
+    <p>Nationality: {{ specialist.nationality }}</p>
+  </div>
+</div>
