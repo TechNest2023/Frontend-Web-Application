@@ -100,16 +100,16 @@ export class RegistrationComponent {
 
 
   registrationForm = this.formBuilder.group({
-    emailRegister: this.email,
-    passwordRegister: this.password,
+    email: this.email,
+    password: this.password,
     confirmPasswordRegister:this.confirmPassword,
-    usernameRegister: this.username,
-    typeOfUserRegister: this.typeOfUser,
-    fullNameRegister: this.fullName,
-    birthdateRegister: this.birthdate,
-    genderRegister:this.gender,
-    careerRegistered:this.careerControl,
-    universityOrInstituteRegister:this.universityOrInstitute,
+    userName: this.username,
+    typeOfUser: this.typeOfUser,
+    fullName: this.fullName,
+    birthdate: this.birthdate,
+    gender:this.gender,
+    career:this.careerControl,
+    universityOrInstitute:this.universityOrInstitute,
   })
 
 
