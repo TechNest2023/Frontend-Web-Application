@@ -124,17 +124,28 @@ export class RegistrationComponent {
 
   isRegistered: boolean = false;
 
-  createAccount(){
+  createAccount() {
     if (this.registrationForm.valid) {
-        this.isRegistered = true;
+      const registrationData: RegistrationRequest = this.registrationForm.value as RegistrationRequest;
+      console.log('Registro exitoso:', registrationData);
 
-      this.registrationService.registration(this.registrationForm.value as RegistrationRequest);
-      this.router.navigateByUrl('/log-in');
-      this.email.reset();
-      this.password.reset();
-    }
-    else {
-      alert('You have not completed all required fields :(');
+      this.registrationService.createUser(registrationData).subscribe(
+          (response) => {
+            // Manejar la respuesta del servidor si es necesario
+            console.log('Registro exitoso:', response);
+            this.isRegistered = true;
+            this.router.navigateByUrl('/log-in');
+            this.email.reset();
+            this.password.reset();
+          },
+          (error) => {
+            // Manejar errores del servidor
+            console.error('Error en el registro:', error);
+            alert('Error en el registro. Inténtalo de nuevo más tarde.');
+          }
+      );
+    } else {
+      alert('Faltan campos por completar.');
     }
   }
 

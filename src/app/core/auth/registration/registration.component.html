@@ -33,8 +33,8 @@
         <mat-form-field [style.width.px]="250">
           <mat-label>Select type of user</mat-label>
           <mat-select [formControl]="typeOfUser" required>
-            <mat-option value="one">Student</mat-option>
-            <mat-option value="two">Specialist</mat-option>
+            <mat-option value="student">Student</mat-option>
+            <mat-option value="specialist">Specialist</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -111,8 +111,8 @@
       <div class="registration-gender">
         <mat-label class="title-register">Gender</mat-label>
         <mat-radio-group aria-label="Gender" [formControl]="gender">
-          <mat-radio-button value="1">Male</mat-radio-button>
-          <mat-radio-button value="2">Female</mat-radio-button>
+          <mat-radio-button value="male">Male</mat-radio-button>
+          <mat-radio-button value="female">Female</mat-radio-button>
         </mat-radio-group>
       </div>
 

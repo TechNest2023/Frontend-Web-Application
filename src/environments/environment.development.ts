@@ -1,4 +1,4 @@
 export const environment ={
     production: false,
-    serverBasePath: 'https://test-api-olive-five.vercel.app/specialists/api'
+    serverBasePath: 'http://localhost:8081/api/v1'
 }

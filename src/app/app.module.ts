@@ -40,6 +40,8 @@ import { FileUploadDialogComponent } from './edu/pages/activities/file-upload-di
 import { ScheduledSessionsComponent } from './edu/pages/scheduled-sessions/scheduled-sessions.component';
 import { ProgressComponent } from './edu/pages/progress/progress.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import { ProfileComponent } from './edu/pages/profile/profile.component';
+import {RegistrationService} from "./core/services/auth/registration.service";
 
 @NgModule({
   declarations: [
@@ -60,6 +62,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     FileUploadDialogComponent,
     ScheduledSessionsComponent,
     ProgressComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,7 +85,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     MatCheckboxModule,
     MatDatepickerModule,
   ],
-  providers: [SpecialistService, AddConversationDialogService],
+  providers: [SpecialistService, AddConversationDialogService, RegistrationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -21,17 +21,28 @@ export class BaseService<T> {
     return   `${this.basePath}${this.resourceEndpoint}`;
   }
 
-  handleError(error: HttpErrorResponse){
-    //Default error handling
-    if (error.error instanceof ErrorEvent){
-      console.error(`An error ocurred: ${error.error.message}`);
-    } else {
-      // Unsuccesful response error code returned from backend
-      console.log(`Backend returned core ${error.status}, body was ${error.error}`);
+
+
+    handleError(error: HttpErrorResponse){
+        // Default error handling
+        if (error.error instanceof ErrorEvent){
+            console.error(`An error ocurred: ${error.error.message}`);
+        } else {
+            // Unsuccesful response error code returned from backend
+            console.log(`Backend returned core ${error.status}, body was ${error.error}`);
+            console.error('Full error object:', error); // Log the entire error object for more details
+        }
+        // Return an observable with a user-facing error message
+        return throwError(() => new Error('Something happened with request, please try again later.'));
     }
-    //Return an observable with a user-facing error message
-    return throwError(()=>new Error('Something happened with request, please try again later.'));
-  }
+
+
+
+    create(data: T):Observable<T> {
+        return this.http.post<T>(this.resourcePath(), data, this.httpOptions)
+            .pipe(retry(2), catchError(this.handleError));
+    }
+
 
   getAll(): Observable<T[]> {
     return this.http.get<T[]>(this.resourcePath(), this.httpOptions)

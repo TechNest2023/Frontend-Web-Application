@@ -1,11 +1,10 @@
-import {LoginRequest} from './loginRequest';
-
-export interface RegistrationRequest extends LoginRequest {
-  fullname: string;
-  confirmPassword: string;
+export interface RegistrationRequest {
+  fullName: string;
+  userName: string;
   typeOfUser: string;
-  birthdate: Date;
-  gender: string;
-  career: string;
+  email: string;
+  password: string;
   universityOrInstitute: string;
+  gender: string;
+  birthdate: string;
 }
