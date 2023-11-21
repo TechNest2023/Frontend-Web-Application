@@ -42,6 +42,7 @@ import { ProgressComponent } from './edu/pages/progress/progress.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import { ProfileComponent } from './edu/pages/profile/profile.component';
 import {RegistrationService} from "./core/services/auth/registration.service";
+import {ProfileService} from "./edu/services/profile.service";
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import {RegistrationService} from "./core/services/auth/registration.service";
 
     SupportComponent,
     SpecialistsComponent,
+    ProfileComponent,
 
     ChatComponent,
     AddConversationDialogComponent,
@@ -85,7 +87,7 @@ import {RegistrationService} from "./core/services/auth/registration.service";
     MatCheckboxModule,
     MatDatepickerModule,
   ],
-  providers: [SpecialistService, AddConversationDialogService, RegistrationService],
+  providers: [SpecialistService, AddConversationDialogService, RegistrationService, ProfileService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

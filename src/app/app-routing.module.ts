@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent} from "./core/auth/login/login.component";
 import {RegistrationComponent} from "./core/auth/registration/registration.component";
 import {HomeComponent} from "./public/pages/home/home.component";
-import {SupportComponent} from "./public/pages/support/support.component";
 import {ChatComponent} from "./edu/pages/chats/chat/chat.component";
 import { ListActivitiesComponent } from './edu/pages/activities/list-activities/list-activities.component';
 import { SelectedSpecialistsComponent } from './edu/pages/selected-specialists/selected-specialists.component';
 import {SidebarComponent} from "./shared/components/sidebar/sidebar.component";
+import {ProfileComponent} from "./edu/pages/profile/profile.component";
 
 const routes: Routes = [
   {
@@ -41,9 +41,9 @@ const routes: Routes = [
     component: SelectedSpecialistsComponent,
   },
   {
-    path: 'support',
-    title: 'Support',
-    component: SupportComponent,
+    path: 'edu/profile',
+    title: 'Profile',
+    component: ProfileComponent,
   },
   {
     path: 'chat',
