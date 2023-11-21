@@ -12,4 +12,5 @@ export class SpecialistService extends BaseService<Specialist>{
     super(http);
     this.resourceEndpoint ='/specialists';
   }
+
 }
