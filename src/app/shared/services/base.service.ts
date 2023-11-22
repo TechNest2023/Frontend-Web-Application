@@ -61,12 +61,4 @@ export class BaseService<T> {
         catchError(this.handleError)
       );
   }
-
-  getProfileById(id: string): Observable<Profile> {
-    return this.http.get<Profile>(`${this.basePath}/profiles/${id}`, this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      );
-  }
 }

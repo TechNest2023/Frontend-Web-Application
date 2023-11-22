@@ -9,7 +9,7 @@ export class NavComponent {
   options =[
     {
       path:'/home',
-      title: 'Home',
+      title: 'Specialists',
       titleIcon: 'home',
     },
     {
