@@ -43,6 +43,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import { ProfileComponent } from './edu/pages/profile/profile.component';
 import {RegistrationService} from "./core/services/auth/registration.service";
 import {ProfileService} from "./edu/services/profile.service";
+import {LoginService} from "./core/services/auth/login.service";
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import {ProfileService} from "./edu/services/profile.service";
     MatCheckboxModule,
     MatDatepickerModule,
   ],
-  providers: [SpecialistService, AddConversationDialogService, RegistrationService, ProfileService],
+  providers: [SpecialistService, AddConversationDialogService,
+    RegistrationService, ProfileService, LoginService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

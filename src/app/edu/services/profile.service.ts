@@ -11,10 +11,6 @@ export class ProfileService extends BaseService<Profile> {
 
   constructor(http: HttpClient)  {
     super(http);
-    this.resourceEndpoint ='/edu/profile';
-  }
-
-  getProfileById(profileId: string): Observable<Profile> {
-    return this.getById(profileId);
+    this.resourceEndpoint ='/profiles';
   }
 }

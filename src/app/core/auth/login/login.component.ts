@@ -54,18 +54,30 @@ export class LoginComponent {
 
   hide = true;
 
-  userLoginOn: boolean = false;
-  authenticatedUser(){
-    if (this.email.valid && this.password.valid){
-      this.userLoginOn = true;
+  //userLoginOn: boolean = false;
 
-      this.loginService.logIn(this.logInForm.value as LoginRequest);
-      this.router.navigateByUrl('/home');
-      this.email.reset();
-      this.password.reset();
-    }
-    else {
-      alert("username or password is incorrect")
+  authenticatedUser(){
+    const email = this.logInForm.get('emailLogin')?.value;
+    const password = this.logInForm.get('passwordLogin')?.value;
+
+    if (email && password) {
+      const loginRequest: LoginRequest = {
+        email,
+        password
+      };
+
+      this.loginService.logIn(loginRequest).subscribe(
+        (response) => {
+          this.router.navigateByUrl('/home');
+        },
+        (error) => {
+          alert("Invalid email or password");
+        }
+      );
+
+      this.logInForm.reset();
+    } else {
+      alert("Invalid email or password");
     }
   }
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {environment} from "../../../environments/environment.development";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
+import {Profile} from "../../edu/model/profile";
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +21,6 @@ export class BaseService<T> {
   private resourcePath() : string {
     return   `${this.basePath}${this.resourceEndpoint}`;
   }
-
-
 
     handleError(error: HttpErrorResponse){
         // Default error handling
@@ -50,7 +49,21 @@ export class BaseService<T> {
   }
 
   getById(id: string): Observable<T> {
-    return this.http.get<T>(`${this.resourcePath()}/${id}`, this.httpOptions)
+    return this.http.get<T>(`${this.resourcePath()}/${id}`, this.httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  authenticate(credentials: T): Observable<any> {
+    return this.http.post<any>(`${this.basePath}${this.resourceEndpoint}/login`, credentials, this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      );
+  }
+
+  getProfileById(id: string): Observable<Profile> {
+    return this.http.get<Profile>(`${this.basePath}/profiles/${id}`, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)

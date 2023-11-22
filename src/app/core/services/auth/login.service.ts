@@ -1,13 +1,20 @@
 import { Injectable } from '@angular/core';
 import {LoginRequest} from "./loginRequest";
+import {BaseService} from "../../../shared/services/base.service";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class LoginService extends BaseService<LoginRequest> {
 
-  constructor() { }
-  logIn(credentials:LoginRequest){
-    console.log(credentials);
+  constructor(http: HttpClient) {
+    super(http);
+    this.resourceEndpoint = '/profiles';
+  }
+
+  logIn(credentials:LoginRequest):Observable<any>{
+    return this.authenticate(credentials);
   }
 }

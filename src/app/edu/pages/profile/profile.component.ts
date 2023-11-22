@@ -7,23 +7,24 @@ import {Profile} from "../../model/profile";
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit{
-  profileId = '1'; // Simulación de un ID de perfil
-  profile: Profile | undefined;
-  maskedPassword = '';
+export class ProfileComponent implements OnInit {
 
-  constructor(private profileService: ProfileService) { }
+  profile: Profile | undefined;
+
+  constructor(private profileService: ProfileService) {}
 
   ngOnInit(): void {
-    this.getProfile();
+    // Aquí puedes obtener el perfil de un usuario específico, quizás usando su ID
+    this.getProfileById('idDelUsuario');
   }
 
-  getProfile(): void {
-    this.profileService.getProfileById(this.profileId)
-      .subscribe((profile: Profile) => {
-        this.profile = profile;
-        // Máscara de la contraseña (solo un ejemplo, debe manejarse de forma segura)
-        this.maskedPassword = '*'.repeat(this.profile.password.length);
+  getProfileById(id: string): void {
+    this.profileService.getProfileById(id)
+      .subscribe((response: Profile) => {
+        this.profile = response;
+      }, (error) => {
+        // Manejo de errores
       });
   }
+
 }
